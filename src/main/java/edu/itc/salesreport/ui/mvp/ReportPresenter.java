@@ -1,6 +1,5 @@
 package edu.itc.salesreport.ui.mvp;
 
-import edu.itc.salesreport.model.SaleTransaction;
 import edu.itc.salesreport.ui.InputRules;
 import edu.itc.salesreport.ui.SalesEvent;
 import edu.itc.salesreport.ui.SalesModel;

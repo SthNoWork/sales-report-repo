@@ -38,7 +38,7 @@ public class ReportWebController {
         this.dataDir = Path.of(dataDir);
     }
 
-    @GetMapping("/report")
+    @GetMapping({"/", "/report"})
     public String report(
             @RequestParam(defaultValue = "2026-09") String month,
             @RequestParam(defaultValue = "ALL") String branch,
@@ -56,6 +56,7 @@ public class ReportWebController {
                 page.addAttribute("error", msg);
             case Inputs(_, Validation.Invalid<String>(var msg)) ->
                 page.addAttribute("error", msg);
+            default -> {}
         }
         return "report";
     }
